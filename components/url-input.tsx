@@ -21,7 +21,7 @@ export function UrlInput() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/resources", {
+      const response = await fetch("http://localhost:5001/resources", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,7 @@ export function UrlInput() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/resources")
+    fetch("http://localhost:5001/resources")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
